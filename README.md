@@ -1,10 +1,9 @@
-\# Node.js CI/CD Pipeline
+# Node.js CI/CD Pipeline
 
+![CI/CD](https://github.com/sinchana082005/CICD_Task1/actions/workflows/main.yml/badge.svg)
 
-
-\## Overview
-
-This project demonstrates Continuous Integration and Continuous Deployment (CI/CD) using GitHub Actions, Docker, and Node.js.
+## Overview
+This project demonstrates CI/CD using GitHub Actions, Docker, and Node.js.
 
 
 
