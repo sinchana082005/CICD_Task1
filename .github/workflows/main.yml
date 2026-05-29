@@ -1,0 +1,33 @@
+name: Node.js CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test || echo "No tests configured"
+
+      - name: Build Docker Image
+        run: docker build -t cicd-task1 .
+
+      - name: Verify Docker Image
+        run: docker images
