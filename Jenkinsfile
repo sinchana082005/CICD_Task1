@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/sinchana082005/CICD_Task1.git'
-            }
-        }
-
         stage('Install Dependencies') {
             steps {
                 bat 'npm install'
@@ -26,6 +20,5 @@ pipeline {
                 bat 'docker images'
             }
         }
-
     }
 }
